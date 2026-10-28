@@ -1,0 +1,25 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+
+    <!-- Dark green background -->
+    <rect width="64" height="64" rx="15" fill="#1F3D2B"></rect>
+
+    <!-- Steam -->
+    <g fill="none" stroke="#E3E9D7" stroke-width="2.5" stroke-linecap="round">
+        <path d="M24 27 C18 21 29 18 24 12"></path>
+        <path d="M33 27 C27 21 38 18 33 12"></path>
+        <path d="M42 27 C36 21 47 18 42 12"></path>
+    </g>
+
+    <!-- Olive green bowl -->
+    <path d="M12 33 H52
+             C50 45 43 51 32 51
+             C21 51 14 45 12 33Z" fill="#788C45"></path>
+
+    <!-- Bowl rim -->
+    <path d="M12 33 H52" stroke="#E3E9D7" stroke-width="3" stroke-linecap="round"></path>
+
+    <!-- Bowl base -->
+    <path d="M25 54 H39" stroke="#E3E9D7" stroke-width="3" stroke-linecap="round"></path>
+
+</svg>

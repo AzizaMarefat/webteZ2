@@ -1,0 +1,514 @@
+
+/* Poppins font - Slovak characters */
+@font-face {
+    font-family: "Poppins";
+    src: url("fonts/poppins-latin-ext-400-normal.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    unicode-range: U+0100-024F, U+1E00-1EFF;
+}
+
+/* Poppins font - basic Latin */
+@font-face {
+    font-family: "Poppins";
+    src: url("fonts/poppins-latin-400-normal.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    unicode-range: U+0000-00FF, U+2000-206F, U+20AC;
+}
+
+
+
+
+body {
+    margin: 0;
+    background-color: #F7F0E5;
+    color: #631923;
+    font-family: "Poppins", sans-serif;
+}
+
+
+
+
+header {
+    background-color: #631923;
+    color: white;
+    padding: 25px;
+}
+
+
+
+
+nav ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+}
+
+nav a {
+    color: #E3CFB0;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+
+
+main {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 20px;
+}
+
+
+
+
+section {
+    background-color: white;
+    padding: 25px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    border-left: 5px solid #AA967F;
+}
+
+
+
+
+h2 {
+    color: #631923;
+}
+
+
+
+
+footer {
+    background-color: #631923;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+
+/*
+   WEBSITE ICON
+ */
+
+.site-icon {
+    color: #E3CFB0;
+    margin-right: 10px;
+}
+
+
+/*
+   TODAY'S DATE
+= */
+
+.today-date {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #E3CFB0;
+    color: #631923;
+    padding: 10px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+}
+
+.today-date i {
+    color: #AA967F;
+    font-size: 18px;
+}
+
+
+
+  
+
+
+.day-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.day-button {
+    background-color: #E3CFB0;
+    color: #631923;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 18px;
+    cursor: pointer;
+}
+
+.day-button:hover {
+    background-color: #AA967F;
+    color: #631923;
+}
+
+.day-button.active {
+    background-color: #631923;
+    color: white;
+}
+
+
+
+nav a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+nav a i {
+    color: #E3CFB0;
+    font-size: 18px;
+}
+
+nav a:hover i {
+    color: #FFFFFF;
+}
+
+
+
+
+footer a {
+    color: #E3CFB0;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #FFFFFF;
+    text-decoration: underline;
+}
+
+footer p {
+    margin: 8px 0;
+}
+
+
+
+
+/* Restaurant card */
+.restaurant-card {
+    background-color: #FFFFFF;
+    border: 1px solid #E3CFB0;
+    border-left: 5px solid #631923;
+    border-radius: 14px;
+    padding: 25px;
+    margin-top: 20px;
+}
+
+/* Restaurant name */
+.restaurant-card h3 {
+    color: #631923;
+    font-size: 22px;
+    margin-top: 0;
+}
+
+/* Restaurant website link */
+.restaurant-card a {
+    color: #631923;
+    text-decoration: underline;
+}
+
+/* Individual meals */
+.restaurant-card p {
+    padding: 12px 0;
+    border-bottom: 1px solid #E3CFB0;
+}
+
+
+/* Individual meal cards */
+.meal-card {
+    background-color: #F7F0E5;
+    border-radius: 20px;
+    padding: 20px;
+    margin-top: 15px;
+}
+
+/* Food name and price */
+.meal-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    color: #631923;
+    font-size: 18px;
+}
+
+/* Weight and allergens */
+.meal-details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-top: 12px;
+    color: #705A55;
+    font-size: 14px;
+}
+
+/* Mobile screens */
+@media (max-width: 600px) {
+    .meal-top {
+        flex-direction: column;
+        gap: 6px;
+    }
+}
+
+
+
+#refresh-menu {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 20px 0;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 12px;
+    background-color: #631923;
+    color: #F7F0E5;
+    font-family: inherit;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+#refresh-menu:hover {
+    background-color: #842D3A;
+}
+
+#refresh-menu:disabled {
+    opacity: 0.6;
+    cursor: wait;
+}
+
+
+.restaurant-filter {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 20px 0;
+}
+
+.restaurant-filter label {
+    color: #631923;
+    font-weight: 600;
+}
+
+#restaurant-select {
+    padding: 12px 16px;
+    border: 1px solid #AA967F;
+    border-radius: 12px;
+    background-color: #F7F0E5;
+    color: #631923;
+    font: inherit;
+    cursor: pointer;
+}
+
+#restaurant-select:focus-visible {
+    outline: 3px solid #AA967F;
+    outline-offset: 2px;
+}
+
+.restaurant-card[hidden] {
+    display: none;
+}
+
+
+
+.updated-time {
+    margin-top: 16px;
+    font-size: 12px;
+    color: #705A55;
+}
+
+.menu-date {
+    margin: 12px 0;
+    color: #705A55;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+
+
+/* Responsive layout */
+
+* {
+    box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 20px 15px;
+    }
+
+    header h1 {
+        font-size: 24px;
+        line-height: 1.4;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    main {
+        margin: 15px auto;
+        padding: 10px;
+    }
+
+    section {
+        padding: 20px 15px;
+    }
+
+    .restaurant-card {
+        padding: 18px;
+    }
+
+    .day-buttons {
+        gap: 8px;
+    }
+
+    .day-button {
+        flex: 1 1 120px;
+        padding: 12px 10px;
+    }
+
+    .restaurant-filter {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    #restaurant-select {
+        width: 100%;
+    }
+
+    .meal-card {
+        padding: 15px;
+    }
+
+    .meal-top {
+        flex-direction: column;
+        gap: 6px;
+        font-size: 16px;
+    }
+
+    .meal-details {
+        gap: 8px;
+        font-size: 13px;
+    }
+
+    #refresh-menu {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 400px) {
+    header h1 {
+        font-size: 20px;
+    }
+
+    nav ul {
+        gap: 10px;
+    }
+
+    .day-button {
+        flex: 1 1 100%;
+    }
+
+    .restaurant-card h3 {
+        font-size: 19px;
+    }
+
+    .today-date {
+        font-size: 12px;
+    }
+}
+
+
+.menu-controls {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin: 20px 0;
+}
+
+.restaurant-filter {
+    margin: 0;
+}
+
+.refresh-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0 30px;
+}
+
+#refresh-menu {
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .menu-controls {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 15px;
+    }
+
+    .restaurant-filter {
+        width: 100%;
+    }
+
+    .refresh-container {
+        width: 100%;
+    }
+
+    #refresh-menu {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+nav a {
+    display: flex;
+    align-items: center;
+    height: 40px;
+}
+
+
+
+.refresh-container {
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+#clear-cache {
+    background-color: #E3CFB0;
+    color: #631923;
+    border: none;
+    border-radius: 12px;
+    padding: 12px 20px;
+    font: inherit;
+    cursor: pointer;
+}
+
+#clear-cache:hover {
+    background-color: #AA967F;
+}
+
+@media (max-width: 768px) {
+    #clear-cache {
+        width: 100%;
+    }
+}

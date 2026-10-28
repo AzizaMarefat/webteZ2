@@ -1,0 +1,138 @@
+
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Obedové menu reštaurácií v okolí FEI STU v Bratislave.">
+    <title>Obedové menu</title>
+
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.2/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.23/dayjs.min.js" defer></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>
+            <i class="bi bi-fork-knife site-icon" aria-hidden="true"></i>
+            Obedové menu v okolí fakulty
+        </h1>
+        <nav aria-label="Hlavná navigácia">
+            <ul>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#about">O projekte</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="menu">
+            <h2>Jedálny lístok</h2>
+
+            <p class="today-date">
+                <i class="bi bi-calendar-heart" aria-hidden="true"></i>
+                <span id="today-date-text"></span>
+            </p>
+
+            <div class="day-buttons" role="group" aria-label="Výber dňa">
+                <button type="button" class="day-button" data-day="1" aria-pressed="false">Pondelok</button>
+                <button type="button" class="day-button" data-day="2" aria-pressed="false">Utorok</button>
+                <button type="button" class="day-button" data-day="3" aria-pressed="false">Streda</button>
+                <button type="button" class="day-button" data-day="4" aria-pressed="false">Štvrtok</button>
+                <button type="button" class="day-button" data-day="5" aria-pressed="false">Piatok</button>
+                <button type="button" class="day-button" data-day="all" aria-pressed="false">Celý týždeň</button>
+            </div>
+
+            <div class="menu-controls">
+                <div class="restaurant-filter">
+                    <label for="restaurant-select">Vyberte reštauráciu:</label>
+                    <select id="restaurant-select">
+                        <option value="all">Všetky reštaurácie</option>
+                        <option value="drag">Reštaurácia DRAG</option>
+                        <option value="eatmeet">Eat & Meet</option>
+                        <option value="druzba">Družba Cantina</option>
+                    </select>
+                </div>
+            </div>
+
+            
+        <div class="refresh-container">
+            <button id="refresh-menu" type="button">
+                <i class="bi bi-arrow-clockwise" aria-hidden="true"></i>
+                Obnoviť menu
+            </button>
+
+            <button id="clear-cache" type="button">
+                Vymazať údaje
+            </button>
+        </div>
+
+
+            <div id="menu-content">
+            </div>
+        </section>
+
+        <section id="about">
+            <h2>O projekte</h2>
+            <p>
+                Táto webová aplikácia zobrazuje obedové menu troch
+                reštaurácií v okolí FEI STU a Mlynskej doliny
+                v Bratislave.
+            </p>
+            <p>
+                Používateľ si môže vybrať konkrétny deň od pondelka
+                do piatka alebo zobraziť menu na celý týždeň.
+                Môže tiež filtrovať reštaurácie a manuálne obnoviť údaje.
+            </p>
+            <p>
+                Pri jednotlivých jedlách sa zobrazujú názvy, ceny,
+                alergény a gramáže, ak sú dostupné.
+                Niektoré reštaurácie uvádzajú aj znížené ceny
+                pre študentov s platným preukazom ISIC.
+            </p>
+
+            <h3>Zdroje údajov</h3>
+            <ul>
+                <li><a href="https://www.restauracia-drag.sk/denne-menu" target="_blank" rel="noopener noreferrer">Reštaurácia DRAG</a></li>
+                <li><a href="https://eatandmeet.sk/tyzdenne-menu" target="_blank" rel="noopener noreferrer">Eat & Meet</a></li>
+                <li><a href="https://www.druzbacatering.sk/jedalny-listok/" target="_blank" rel="noopener noreferrer">Družba Cantina</a></li>
+            </ul>
+
+            <h3>Spracovanie údajov</h3>
+            <p>
+                Aplikácia načítava lokálne uložené HTML dokumenty pomocou Fetch API.
+                Získané dokumenty spracúva pomocou DOMParser a DOM selektorov.
+                Názvy jedál, ceny a ďalšie údaje sa zobrazujú v samostatných kartách.
+            </p>
+            <p>
+                Na ukladanie načítaných údajov sa používa localStorage.
+                Používateľ môže menu obnoviť pomocou tlačidla „Obnoviť menu“.
+                Lokálne HTML súbory sa neaktualizujú automaticky.
+            </p>
+
+            <h3>Použité technológie</h3>
+            <ul>
+                <li>HTML5 a CSS3</li>
+                <li>JavaScript</li>
+                <li>Fetch API a DOMParser</li>
+                <li>localStorage</li>
+                <li>Bootstrap Icons</li>
+                <li>Day.js</li>
+                <li>Poppins – lokálne uložené písmo</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>WEBTE1 – Zadanie 2</p>
+        <p>
+            Použité knižnice:
+            <a href="https://icons.getbootstrap.com/" target="_blank" rel="noopener noreferrer">Bootstrap Icons</a>
+            |
+            <a href="https://day.js.org/" target="_blank" rel="noopener noreferrer">Day.js</a>
+        </p>
+    </footer>
+</body>
+</html>
